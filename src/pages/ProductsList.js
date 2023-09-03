@@ -15,7 +15,7 @@ export default function ProductsList() {
   const { products, setProducts, productsData, setProductsData } = useContext(GlobalContext);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/${productType}`).then((res) => {
+    axios.get(`https://vercel-restful-api.vercel.app/${productType}`).then((res) => {
       setProducts(res.data);
       setProductsData(res.data);
     });
