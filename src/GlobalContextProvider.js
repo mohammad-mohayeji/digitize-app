@@ -1,29 +1,33 @@
 import { createContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import convertNumberToPersian from "./useConvertNumbersToPersian";
+import useConvertNumbersToPersian from "./useConvertNumbersToPersian";
 
 export const GlobalContext = createContext();
 
 export default function GlobalContextProvider({ children }) {
   const [products, setProducts] = useState([{ id: 1, category: "" }]);
-  const [productsData, setProductsData] = useState([{ id: 1, category: "" }]);
+  const [sortType, setSortType] = useState("mostPopular");
   const [priceRange, setPriceRange] = useState("any");
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
 
   const [cartItems, setCartItems] = useState([]);
 
-  const increaseQuantityHandler = (prodcut) => {
+  const increaseQuantityHandler = (product) => {
     const existingProduct = cartItems.find(
-      (item) => item.id === prodcut.id && item.category === prodcut.category
+      (item) => item.id === product.id && item.category === product.category
     );
     if (existingProduct) {
       setCartItems(
         cartItems.map((item) =>
-          item.id === prodcut.id
+          item.id === product.id && item.category === product.category
             ? { ...existingProduct, quantity: existingProduct.quantity + 1 }
             : item
         )
       );
     } else {
-      setCartItems([...cartItems, { ...prodcut, quantity: 1 }]);
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
       Swal.fire({
         icon: "success",
         title: "محصول به سبد خرید اضافه شد!",
@@ -43,7 +47,7 @@ export default function GlobalContextProvider({ children }) {
     } else {
       setCartItems(
         cartItems.map((item) =>
-          item.id === product.id
+          item.id === product.id && item.category === product.category
             ? { ...existingProduct, quantity: existingProduct.quantity - 1 }
             : item
         )
@@ -58,34 +62,7 @@ export default function GlobalContextProvider({ children }) {
     setCartItems(cartItems.filter((item) => item.id !== product.id));
   };
 
-  useEffect(() => {
-    // create a function that check if the string includes '(any)'
-    const isDefault = (str) => {
-      return str.split(" ").includes("any");
-    };
-
-    // get first value of number and parse it to number
-    const minPrice = parseInt(priceRange.split(" ")[0]);
-
-    // get second value of number (which is the maximum) and parse it to number
-    const maxPrice = parseInt(priceRange.split(" ")[2]);
-
-    const newProducts = productsData.filter((product) => {
-      // if all values are default
-      if (isDefault(priceRange)) {
-        return product;
-      }
-
-      // if price is not default
-      if (!isDefault(priceRange)) {
-        if (product.price >= minPrice && product.price <= maxPrice) {
-          return product;
-        }
-      }
-    });
-
-    setProducts(newProducts);
-  }, [priceRange]);
+  useConvertNumbersToPersian();
 
   return (
     <GlobalContext.Provider
@@ -99,8 +76,12 @@ export default function GlobalContextProvider({ children }) {
         setPriceRange,
         products,
         setProducts,
-        productsData,
-        setProductsData,
+        sortType,
+        setSortType,
+        minPrice,
+        setMinPrice,
+        maxPrice,
+        setMaxPrice,
       }}
     >
       {children}

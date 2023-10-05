@@ -15,7 +15,7 @@ export default function ProductCard({ item }) {
         </span>
       </div>
       {/* title - price */}
-      <div className="text-base font-bold text-slate-800 mb-2">
+      <div className="text-sm md:text-base font-bold text-slate-800 mb-2 min-h-[50px]">
         {item.title}
       </div>
       <div className="font-bold text-orange-700 text-left mb-2">

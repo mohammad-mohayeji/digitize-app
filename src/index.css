@@ -10,10 +10,6 @@
     font-family: "Noto Sans Arabic", sans-serif;
   }
 
-  .en-font {
-    font-family: "Edu SA Beginner";
-  }
-
   /* scrollbar width */
   ::-webkit-scrollbar {
     width: 7px;
@@ -41,5 +37,9 @@
   /* scrollbar Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+
+  .mobileBottomNav .active {
+    @apply text-slate-800
   }
 }

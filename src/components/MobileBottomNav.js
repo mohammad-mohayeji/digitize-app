@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-// import our global context
+// import global context
 import { GlobalContext } from "../GlobalContextProvider";
 
 export default function MobileBottomNav() {
     const { cartItems } = useContext(GlobalContext);
   return (
-    <nav className="block lg:hidden fixed bottom-0 w-full py-1 bg-white px-5 rounded-tl-lg rounded-tr-lg shadow-lg border-t border-gray-300">
-      <ul className="flex items-center justify-around gap-x-3 text-sm text-slate-800">
+    <nav className="mobileBottomNav block lg:hidden fixed z-30 bottom-0 w-full py-1 bg-white px-5 rounded-tl-lg rounded-tr-lg shadow-lg border-t border-gray-300">
+      <ul className="flex items-center justify-around gap-x-3 text-sm text-slate-500">
         <li>
-          <Link to="/" className="flex items-center gap-x-2 py-3">
+          <NavLink to="/" className="flex items-center gap-x-2 py-3">
             <span>
               <svg
                 width="28"
@@ -22,10 +22,10 @@ export default function MobileBottomNav() {
                 <path d="M24.72 7.09358L17.04 1.72024C14.9467 0.253576 11.7333 0.333576 9.71999 1.89358L3.03999 7.10691C1.70665 8.14691 0.65332 10.2802 0.65332 11.9602V21.1602C0.65332 24.5602 3.41332 27.3336 6.81332 27.3336H21.1867C24.5867 27.3336 27.3467 24.5736 27.3467 21.1736V12.1336C27.3467 10.3336 26.1867 8.12024 24.72 7.09358ZM15 22.0002C15 22.5469 14.5467 23.0002 14 23.0002C13.4533 23.0002 13 22.5469 13 22.0002V18.0002C13 17.4536 13.4533 17.0002 14 17.0002C14.5467 17.0002 15 17.4536 15 18.0002V22.0002Z" />
               </svg>
             </span>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/classification" className="flex items-center gap-x-2 py-3">
+          <NavLink to="/classification" className="flex items-center gap-x-2 py-3">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,10 +38,10 @@ export default function MobileBottomNav() {
                 </g>
               </svg>
             </span>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/cart">
+          <NavLink to="/cart">
             <span className="relative">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ export default function MobileBottomNav() {
                 ""
               )}
             </span>
-          </Link>
+          </NavLink>
         </li>
         <li>
           <Link>

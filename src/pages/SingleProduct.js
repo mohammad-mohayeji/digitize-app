@@ -16,11 +16,19 @@ export default function SingleProduct() {
 
   useEffect(() => {
     axios
-      .get(`https://vercel-restful-api.vercel.app/${params.productType}/${params.productID}`)
+      .get(`http://localhost:5000/${params.productType}/${params.productID}`)
       .then((res) => {
         setProduct(res.data);
       });
   }, []);
+
+  let title =
+    params.productType === "mobile"
+      ? "تلفن همراه اپل" 
+      : params.productType === "lapTop" 
+      ? "لپ تاپ اپل"
+      : "ساعت هوشمند اپل";
+  
   return (
     <div>
       <MobileHeader title={product.category} />
@@ -45,7 +53,7 @@ export default function SingleProduct() {
                         <circle cx="10.5" cy="9.5" r="9.5" fill="#FFCBCB" fillOpacity=".28"/>
                       </svg>
                     </span>
-                    <span className="text-orange-500">تلفن همراه اپل</span>
+                    <span className="text-orange-500">{title}</span>
                   </h4>
                   <h2 className="text-xl font-semibold mb-2">
                     {product.title}

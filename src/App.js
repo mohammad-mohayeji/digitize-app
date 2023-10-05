@@ -1,9 +1,11 @@
 import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
 
 // import components
 import MainHeader from "./components/MainHeader";
 import Footer from "./components/Footer";
 import ScrollToTop from "./ScrollToTop";
+import convertNumberToPersian from "./useConvertNumbersToPersian";
 
 // import pages
 import Home from "./pages/Home";

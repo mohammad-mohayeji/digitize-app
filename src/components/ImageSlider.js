@@ -47,7 +47,7 @@ const properties = {
 export default function ImageSlider() {
   return (
     <div className="slide-container mb-8">
-      <Slide indicators={true} {...properties}>
+      <Slide indicators={true} {...properties} duration={3000}>
         {slideImages.map((slideImage, index) => (
           <div key={index}>
             <div style={{ ...divStyle, backgroundImage: `url(${slideImage.url})` }}></div>

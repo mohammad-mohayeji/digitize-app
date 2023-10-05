@@ -11,7 +11,9 @@
       "color": "black",
       "storage": "۱۲۸ گیگابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 90,
+      "views": 420
     },
     {
       "id": 2,
@@ -24,7 +26,9 @@
       "color": "white",
       "storage": "۵۱۲ گیگابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 80,
+      "views": 450
     },
     {
       "id": 3,
@@ -37,7 +41,9 @@
       "color": "pink",
       "storage": "۲۵۶ گیگابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 95,
+      "views": 350
     },
     {
       "id": 4,
@@ -50,7 +56,9 @@
       "color": "yellow",
       "storage": "۱ ترابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 85,
+      "views": 150
     },
     {
       "id": 5,
@@ -63,7 +71,9 @@
       "color": "black",
       "storage": "۱۲۸ گیگابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 90,
+      "views": 420
     },
     {
       "id": 6,
@@ -76,7 +86,9 @@
       "color": "white",
       "storage": "۵۱۲ گیگابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 80,
+      "views": 450
     },
     {
       "id": 7,
@@ -89,7 +101,9 @@
       "color": "pink",
       "storage": "۲۵۶ گیگابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 95,
+      "views": 350
     },
     {
       "id": 8,
@@ -102,7 +116,9 @@
       "color": "yellow",
       "storage": "۱ ترابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 85,
+      "views": 150
     },
     {
       "id": 9,
@@ -115,7 +131,9 @@
       "color": "black",
       "storage": "۱۲۸ گیگابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 90,
+      "views": 420
     },
     {
       "id": 10,
@@ -128,7 +146,9 @@
       "color": "white",
       "storage": "۵۱۲ گیگابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 80,
+      "views": 450
     },
     {
       "id": 11,
@@ -141,7 +161,9 @@
       "color": "pink",
       "storage": "۲۵۶ گیگابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 95,
+      "views": 350
     },
     {
       "id": 12,
@@ -154,7 +176,9 @@
       "color": "yellow",
       "storage": "۱ ترابایت",
       "screenSize": "۶ اینچ و بزرگتر",
-      "cellular": "2G - 3G - 4G - 5G"
+      "cellular": "2G - 3G - 4G - 5G",
+      "popularity": 85,
+      "views": 150
     }
   ],
   "lapTop": [
@@ -168,8 +192,10 @@
       "imgURL": "https://s8.uupload.ir/files/b2c0eb53f0eeacdefb8771155bf5e4887222a654_1672051046-removebg-preview_klnc.png",
       "color": "gray",
       "storage": "۲۵۶ گیگابایت",
+      "screenSize": "۱۳.۳ اینچ",
       "cellular": "-",
-      "screenSize": "۱۳.۳ اینچ"
+      "popularity": 90,
+      "views": 420
     },
     {
       "id": 2,
@@ -181,8 +207,10 @@
       "imgURL": "https://s8.uupload.ir/files/f880254cbe5fb6ab4adf6e1eb40cadb5931ac4c9_1666687211-removebg-preview_umzg.png",
       "color": "gray",
       "storage": "۲۵۶ گیگابایت",
+      "screenSize": "۱۳.۶ اینچ",
       "cellular": "-",
-      "screenSize": "۱۳.۶ اینچ"
+      "popularity": 80,
+      "views": 450
     },
     {
       "id": 3,
@@ -194,8 +222,10 @@
       "imgURL": "https://s8.uupload.ir/files/0453261f5778b624dae7dda88a414fe8fcf8d109_1671472045-removebg-preview_pttw.png",
       "color": "gray",
       "storage": "۲۵۶ گیگابایت",
+      "screenSize": "۱۳.۳ اینچ",
       "cellular": "-",
-      "screenSize": "۱۳.۳ اینچ"
+      "popularity": 95,
+      "views": 350
     },
     {
       "id": 4,
@@ -207,8 +237,10 @@
       "imgURL": "https://s8.uupload.ir/files/2015ef7e789f650a0a80c00ca3c7b13a6de2693a_1671293972-removebg-preview_c7xj.png",
       "color": "gray",
       "storage": "۱ ترابایت",
+      "screenSize": "۱۶.۲ اینچ",
       "cellular": "-",
-      "screenSize": "۱۶.۲ اینچ"
+      "popularity": 85,
+      "views": 150
     },
     {
       "id": 5,
@@ -220,8 +252,10 @@
       "imgURL": "https://s8.uupload.ir/files/b2c0eb53f0eeacdefb8771155bf5e4887222a654_1672051046-removebg-preview_klnc.png",
       "color": "gray",
       "storage": "۲۵۶ گیگابایت",
+      "screenSize": "۱۳.۳ اینچ",
       "cellular": "-",
-      "screenSize": "۱۳.۳ اینچ"
+      "popularity": 90,
+      "views": 420
     },
     {
       "id": 6,
@@ -233,8 +267,10 @@
       "imgURL": "https://s8.uupload.ir/files/f880254cbe5fb6ab4adf6e1eb40cadb5931ac4c9_1666687211-removebg-preview_umzg.png",
       "color": "gray",
       "storage": "۲۵۶ گیگابایت",
+      "screenSize": "۱۳.۶ اینچ",
       "cellular": "-",
-      "screenSize": "۱۳.۶ اینچ"
+      "popularity": 80,
+      "views": 450
     },
     {
       "id": 7,
@@ -246,8 +282,10 @@
       "imgURL": "https://s8.uupload.ir/files/0453261f5778b624dae7dda88a414fe8fcf8d109_1671472045-removebg-preview_pttw.png",
       "color": "gray",
       "storage": "۲۵۶ گیگابایت",
+      "screenSize": "۱۳.۳ اینچ",
       "cellular": "-",
-      "screenSize": "۱۳.۳ اینچ"
+      "popularity": 95,
+      "views": 350
     },
     {
       "id": 8,
@@ -259,8 +297,10 @@
       "imgURL": "https://s8.uupload.ir/files/2015ef7e789f650a0a80c00ca3c7b13a6de2693a_1671293972-removebg-preview_c7xj.png",
       "color": "gray",
       "storage": "۱ ترابایت",
+      "screenSize": "۱۶.۲ اینچ",
       "cellular": "-",
-      "screenSize": "۱۶.۲ اینچ"
+      "popularity": 85,
+      "views": 150
     },
     {
       "id": 9,
@@ -272,8 +312,10 @@
       "imgURL": "https://s8.uupload.ir/files/b2c0eb53f0eeacdefb8771155bf5e4887222a654_1672051046-removebg-preview_klnc.png",
       "color": "gray",
       "storage": "۲۵۶ گیگابایت",
+      "screenSize": "۱۳.۳ اینچ",
       "cellular": "-",
-      "screenSize": "۱۳.۳ اینچ"
+      "popularity": 90,
+      "views": 420
     },
     {
       "id": 10,
@@ -285,8 +327,10 @@
       "imgURL": "https://s8.uupload.ir/files/f880254cbe5fb6ab4adf6e1eb40cadb5931ac4c9_1666687211-removebg-preview_umzg.png",
       "color": "gray",
       "storage": "۲۵۶ گیگابایت",
+      "screenSize": "۱۳.۶ اینچ",
       "cellular": "-",
-      "screenSize": "۱۳.۶ اینچ"
+      "popularity": 80,
+      "views": 450
     },
     {
       "id": 11,
@@ -298,8 +342,10 @@
       "imgURL": "https://s8.uupload.ir/files/0453261f5778b624dae7dda88a414fe8fcf8d109_1671472045-removebg-preview_pttw.png",
       "color": "gray",
       "storage": "۲۵۶ گیگابایت",
+      "screenSize": "۱۳.۳ اینچ",
       "cellular": "-",
-      "screenSize": "۱۳.۳ اینچ"
+      "popularity": 95,
+      "views": 350
     },
     {
       "id": 12,
@@ -311,8 +357,10 @@
       "imgURL": "https://s8.uupload.ir/files/2015ef7e789f650a0a80c00ca3c7b13a6de2693a_1671293972-removebg-preview_c7xj.png",
       "color": "gray",
       "storage": "۱ ترابایت",
+      "screenSize": "۱۶.۲ اینچ",
       "cellular": "-",
-      "screenSize": "۱۶.۲ اینچ"
+      "popularity": 85,
+      "views": 150
     }
   ],
   "smartWatch": [
@@ -327,7 +375,9 @@
       "color": "orange",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۹ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 90,
+      "views": 420
     },
     {
       "id": 2,
@@ -340,7 +390,9 @@
       "color": "blue",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۵ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 80,
+      "views": 450
     },
     {
       "id": 3,
@@ -353,7 +405,9 @@
       "color": "gray",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۹ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 95,
+      "views": 350
     },
     {
       "id": 4,
@@ -366,7 +420,9 @@
       "color": "pink",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۰ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 85,
+      "views": 150
     },
     {
       "id": 5,
@@ -379,7 +435,9 @@
       "color": "orange",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۹ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 90,
+      "views": 420
     },
     {
       "id": 6,
@@ -392,7 +450,9 @@
       "color": "blue",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۵ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 80,
+      "views": 450
     },
     {
       "id": 7,
@@ -405,7 +465,9 @@
       "color": "gray",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۹ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 95,
+      "views": 350
     },
     {
       "id": 8,
@@ -418,7 +480,9 @@
       "color": "pink",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۰ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 85,
+      "views": 150
     },
     {
       "id": 9,
@@ -431,7 +495,9 @@
       "color": "orange",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۹ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 90,
+      "views": 420
     },
     {
       "id": 10,
@@ -444,7 +510,9 @@
       "color": "blue",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۵ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 80,
+      "views": 450
     },
     {
       "id": 11,
@@ -457,7 +525,9 @@
       "color": "gray",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۹ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 95,
+      "views": 350
     },
     {
       "id": 12,
@@ -470,7 +540,9 @@
       "color": "pink",
       "storage": "۳۲ گیگابایت",
       "screenSize": "۴۰ میلی متر",
-      "cellular": "-"
+      "cellular": "-",
+      "popularity": 85,
+      "views": 150
     }
   ]
 }

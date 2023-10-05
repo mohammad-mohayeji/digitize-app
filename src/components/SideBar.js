@@ -3,7 +3,7 @@ import { GlobalContext } from '../GlobalContextProvider'
 import { Link } from 'react-router-dom'
 
 export default function SideBar() {
-    const {priceRange, setPriceRange, changeHandler} = useContext(GlobalContext)
+    const {priceRange, setPriceRange} = useContext(GlobalContext)
 
     const[isOpen, setIsOpen] = useState(true)
     const display = !isOpen ? "hidden" : "";
@@ -65,31 +65,31 @@ export default function SideBar() {
                     </button>
                     <div className={`${display} p-4 flex flex-col gap-y-2`}>
                         <div className="flex items-center gap-x-3">
-                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("any")} defaultChecked value='any' name="price" id="desktopPriceRange1" type="radio" className="form-checkbox rounded text-orange-500 focus:ring-orange-500"/>
+                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("any")} defaultChecked value='any' name="desktopPriceRange" id="desktopPriceRange1" type="radio" className="form-radio checked:bg-none focus:ring-0 rounded focus:ring-offset-0 text-orange-500"/>
                             <label htmlFor="desktopPriceRange1"  className='text-sm xl:text-base font-semibold'>همه</label>
                         </div>
                         <div className="flex items-center gap-x-3">
-                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("10000000 - 20000000")} value='10000000 - 20000000' name="price" id="desktopPriceRange2" type="radio" className="form-checkbox rounded text-orange-500 focus:ring-orange-500"/>
+                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("10000000 - 20000000")} value='10000000 - 20000000' name="desktopPriceRange" id="desktopPriceRange2" type="radio" className="form-radio checked:bg-none focus:ring-0 rounded focus:ring-offset-0 text-orange-500"/>
                             <label htmlFor="desktopPriceRange2"  className='text-sm xl:text-base font-semibold'>۱۰,۰۰۰,۰۰۰ - ۲۰,۰۰۰,۰۰۰</label>
                         </div>
                         <div className="flex items-center gap-x-3">
-                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("20000000 - 30000000")} value='20000000 - 30000000' name="price" id="desktopPriceRange3" type="radio" className="form-checkbox rounded text-orange-500 focus:ring-orange-500"/>
+                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("20000000 - 30000000")} value='20000000 - 30000000' name="desktopPriceRange" id="desktopPriceRange3" type="radio" className="form-radio checked:bg-none focus:ring-0 rounded focus:ring-offset-0 text-orange-500"/>
                             <label htmlFor="desktopPriceRange3"  className='text-sm xl:text-base font-semibold'>۲۰,۰۰۰,۰۰۰ - ۳۰,۰۰۰,۰۰۰</label>
                         </div>
                         <div className="flex items-center gap-x-3">
-                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("30000000 - 40000000")} value='30000000 - 40000000' name="price" id="desktopPriceRange4" type="radio" className="form-checkbox rounded text-orange-500 focus:ring-orange-500"/>
+                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("30000000 - 40000000")} value='30000000 - 40000000' name="desktopPriceRange" id="desktopPriceRange4" type="radio" className="form-radio checked:bg-none focus:ring-0 rounded focus:ring-offset-0 text-orange-500"/>
                             <label htmlFor="desktopPriceRange4"  className='text-sm xl:text-base font-semibold'>۳۰,۰۰۰,۰۰۰ - ۴۰,۰۰۰,۰۰۰</label>
                         </div>
                         <div className="flex items-center gap-x-3">
-                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("40000000 - 50000000")} value='40000000 - 50000000' name="price" id="desktopPriceRange5" type="radio" className="form-checkbox rounded text-orange-500 focus:ring-orange-500"/>
+                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("40000000 - 50000000")} value='40000000 - 50000000' name="desktopPriceRange" id="desktopPriceRange5" type="radio" className="form-radio checked:bg-none focus:ring-0 rounded focus:ring-offset-0 text-orange-500"/>
                             <label htmlFor="desktopPriceRange5"  className='text-sm xl:text-base font-semibold'>۴۰,۰۰۰,۰۰۰ - ۵۰,۰۰۰,۰۰۰</label>
                         </div>
                         <div className="flex items-center gap-x-3">
-                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("50000000 - 60000000")} value='50000000 - 60000000' name="price" id="desktopPriceRange6" type="radio" className="form-checkbox rounded text-orange-500 focus:ring-orange-500"/>
+                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("50000000 - 60000000")} value='50000000 - 60000000' name="desktopPriceRange" id="desktopPriceRange6" type="radio" className="form-radio checked:bg-none focus:ring-0 rounded focus:ring-offset-0 text-orange-500"/>
                             <label htmlFor="desktopPriceRange6"  className='text-sm xl:text-base font-semibold'>۵۰,۰۰۰,۰۰۰ - ۶۰,۰۰۰,۰۰۰</label>
                         </div>
                         <div className="flex items-center gap-x-3">
-                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("60000000 - 70000000")} value='60000000 - 70000000' name="price" id="desktopPriceRange7" type="radio" className="form-checkbox rounded text-orange-500 focus:ring-orange-500"/>
+                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("60000000 - 70000000")} value='60000000 - 70000000' name="desktopPriceRange" id="desktopPriceRange7" type="radio" className="form-radio checked:bg-none focus:ring-0 rounded focus:ring-offset-0 text-orange-500"/>
                             <label htmlFor="desktopPriceRange7"  className='text-sm xl:text-base font-semibold'>۶۰,۰۰۰,۰۰۰ - ۷۰,۰۰۰,۰۰۰</label>
                         </div>
                     </div>

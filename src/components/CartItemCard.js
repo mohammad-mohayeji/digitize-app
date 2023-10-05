@@ -1,5 +1,9 @@
 import React, { useContext } from 'react'
 
+import { MinusSmallIcon } from '@heroicons/react/24/outline'
+import { PlusSmallIcon } from '@heroicons/react/24/outline'
+import { TrashIcon } from '@heroicons/react/24/outline'
+
 // import our global context
 import { GlobalContext } from '../GlobalContextProvider'
 
@@ -23,18 +27,21 @@ export default function CartItemCard({item}) {
             </button>
             <div className="flex items-center gap-x-2">
                 <button onClick={(e)=> increaseQuantityHandler(item)} className="bg-gray-300 rounded-full w-4 h-4 md:w-6 md:h-6 flex justify-center items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-                  </svg>
+                  <PlusSmallIcon className="w-4 h-4 md:w-6 md:h-6 flex justify-center items-center"/>
                 </button>
-                <span className="border border-orange-400 en-font py-1 px-1.5 rounded-sm md:text-lg">
+                <span className="en-font py-1 px-1.5 rounded-sm md:text-2xl w-[25px] text-center">
                   {item.quantity}
                 </span>
+                {item.quantity > 1 && (
                 <button onClick={(e)=> decreaseQuantityHandler(item)} className="bg-orange-100 rounded-full w-4 h-4 md:w-6 md:h-6 flex justify-center items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" />
-                  </svg>
+                  <MinusSmallIcon className="w-4 h-4 md:w-6 md:h-6 flex justify-center items-center text-orange-600"/>
                 </button>
+                )}
+                {item.quantity === 1 && (
+                <button onClick={(e)=> decreaseQuantityHandler(item)} className="w-4 h-4 md:w-6 md:h-6 flex justify-center items-center">
+                  <TrashIcon className="w-4 h-4 md:w-6 md:h-6 flex justify-center items-center hover:text-orange-600 transition duration-200"/>
+                </button>
+                )}
             </div>
         </div>
     </div>
