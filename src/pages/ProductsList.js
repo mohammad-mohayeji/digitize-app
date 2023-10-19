@@ -61,7 +61,7 @@ export default function ProductsList() {
   return (
     <div>
       <MobileHeader title={title} />
-      <MobileFilterModal />
+      <MobileFilterModal searchBoxHandler={searchBoxHandler}/>
       <div className="container mx-auto xl:max-w-screen-xl grid grid-cols-12 lg:grid-rows-[60px_minmax(500px,_1fr)] lg:gap-8 md:px-4 md:mt-6 mb-10 pb-10">
         <SideBar/>
         <SortBar searchBoxHandler={searchBoxHandler}/>

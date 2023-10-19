@@ -3,7 +3,9 @@ import React, { useContext, useState } from "react";
 // import our global context
 import { GlobalContext } from "../GlobalContextProvider";
 
-export default function MobileFilterModal() {
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+
+export default function MobileFilterModal({searchBoxHandler}) {
   const { priceRange, setPriceRange, sortType, setSortType } = useContext(GlobalContext);
   const [accIsOpen, setAccIsOpen] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -27,7 +29,7 @@ export default function MobileFilterModal() {
   return (
     // filter-sort bar (mobile queries)
     <div>
-      <div className="flex lg:hidden justify-between items-center gap-x-3 mb-9 px-5">
+      <div className="flex lg:hidden justify-between items-center gap-x-3 mb-5 px-5">
         <button onClick={(e)=> setShowModal2(true)} className="w-full bg-white rounded-md p-2 flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 stroke-orange-600">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"/>
@@ -40,6 +42,12 @@ export default function MobileFilterModal() {
           </svg>
           <span className="mr-2 text-sm sm:text-base font-semibold text-slate-800">{priceRange === "any" ? "فیلتر" : priceRange }</span>
         </button>
+      </div>
+      <div className="md:hidden w-full px-5 mb-9">
+        <div className="bg-white rounded-md w-full flex items-center px-2">
+          <MagnifyingGlassIcon className="w-5 h-5" />
+          <input type="text" onChange={searchBoxHandler} className="focus:ring-0 border-none w-full text-sm placeholder:text-sm" placeholder="جستجوی نام محصول، نام برند، نام مدل و ..."/>
+        </div>
       </div>
 
       {/* sort modal */}

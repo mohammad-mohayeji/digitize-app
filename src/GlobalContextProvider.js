@@ -1,9 +1,12 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 import Swal from "sweetalert2";
-import convertNumberToPersian from "./useConvertNumbersToPersian";
 import useConvertNumbersToPersian from "./useConvertNumbersToPersian";
+import AppReducer from "./AppReducer";
 
 export const GlobalContext = createContext();
+const initialState = {
+  cart: [],
+};
 
 export default function GlobalContextProvider({ children }) {
   const [products, setProducts] = useState([{ id: 1, category: "" }]);
@@ -12,54 +15,63 @@ export default function GlobalContextProvider({ children }) {
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
 
-  const [cartItems, setCartItems] = useState([]);
-
+  const [state, dispatch] = useReducer(AppReducer, initialState);
   const increaseQuantityHandler = (product) => {
-    const existingProduct = cartItems.find(
-      (item) => item.id === product.id && item.category === product.category
-    );
-    if (existingProduct) {
-      setCartItems(
-        cartItems.map((item) =>
-          item.id === product.id && item.category === product.category
-            ? { ...existingProduct, quantity: existingProduct.quantity + 1 }
-            : item
-        )
-      );
-    } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
-      Swal.fire({
-        icon: "success",
-        title: "محصول به سبد خرید اضافه شد!",
-        showConfirmButton: false,
-        timer: 2500,
-        timerProgressBar: true,
-      });
-    }
+    // const existingProduct = cartItems.find(
+    //   (item) => item.id === product.id && item.category === product.category
+    // );
+    // if (existingProduct) {
+    //   setCartItems(
+    //     cartItems.map((item) =>
+    //       item.id === product.id && item.category === product.category
+    //         ? { ...existingProduct, quantity: existingProduct.quantity + 1 }
+    //         : item
+    //     )
+    //   );
+    // } else {
+    //   setCartItems([...cartItems, { ...product, quantity: 1 }]);
+    //   Swal.fire({
+    //     icon: "success",
+    //     title: "محصول به سبد خرید اضافه شد!",
+    //     showConfirmButton: false,
+    //     timer: 2500,
+    //     timerProgressBar: true,
+    //   });
+    // }
+    dispatch({
+      type: "INCREASE_QUANTITY",
+      payload: product,
+    });
   };
-
   const decreaseQuantityHandler = (product) => {
-    const existingProduct = cartItems.find(
-      (item) => item.id === product.id && item.category === product.category
-    );
-    if (existingProduct.quantity === 1) {
-      setCartItems(cartItems.filter((item) => item.id !== product.id));
-    } else {
-      setCartItems(
-        cartItems.map((item) =>
-          item.id === product.id && item.category === product.category
-            ? { ...existingProduct, quantity: existingProduct.quantity - 1 }
-            : item
-        )
-      );
-    }
+    // const existingProduct = cartItems.find(
+    //   (item) => item.id === product.id && item.category === product.category
+    // );
+    // if (existingProduct.quantity === 1) {
+    //   setCartItems(cartItems.filter((item) => item.id !== product.id || item.category !== product.category));
+    // } else {
+    //   setCartItems(
+    //     cartItems.map((item) =>
+    //       item.id === product.id && item.category === product.category
+    //         ? { ...existingProduct, quantity: existingProduct.quantity - 1 }
+    //         : item
+    //     )
+    //   );
+    // }
+    dispatch({
+      type: "DECREASE_QUANTITY",
+      payload: product,
+    });
   };
-
   const removeFromCartHandler = (product) => {
-    const existingProduct = cartItems.find(
-      (item) => item.id === product.id && item.category === product.category
-    );
-    setCartItems(cartItems.filter((item) => item.id !== product.id));
+    // const existingProduct = cartItems.find(
+    //   (item) => item.id === product.id && item.category === product.category
+    // );
+    // setCartItems(cartItems.filter((item) => item.id !== product.id));
+    dispatch({
+      type: "REMOVE_FROM_CART",
+      payload: product,
+    });
   };
 
   useConvertNumbersToPersian();
@@ -67,8 +79,8 @@ export default function GlobalContextProvider({ children }) {
   return (
     <GlobalContext.Provider
       value={{
-        cartItems,
-        setCartItems,
+        cartItems: state.cart,
+        // setCartItems,
         increaseQuantityHandler,
         decreaseQuantityHandler,
         removeFromCartHandler,

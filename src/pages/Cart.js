@@ -15,12 +15,7 @@ export default function Cart() {
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-  // useEffect(() => {
-  //   convertNumberToPersian();
-  // });
-
   useConvertNumbersToPersian();
-
 
   return (
     <>

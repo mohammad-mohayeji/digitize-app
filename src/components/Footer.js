@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
         <div>
           <div className="mb-4">
-            <img src={map} className="max-w-[150px]" />
+            <img src={map} className="max-w-[160px]" />
           </div>
           <div className="flex flex-col gap-y-2 items-end font-medium">
             <div className="flex items-center gap-x-2">
