@@ -31,12 +31,12 @@ export default function ProductsList() {
 
   const sortTypeHandler = (sort, order) => {
     if (priceRange === "any") {
-      axios.get(`http://localhost:5000/${productType}?_sort=${sort}&_order=${order}`)
+      axios.get(`https://vercel-restful-api.vercel.app/${productType}?_sort=${sort}&_order=${order}`)
         .then((res) => {
           setProducts(res.data);
         });
     } else {
-      axios.get(`http://localhost:5000/${productType}?_sort=${sort}&_order=${order}&price_gte=${minPrice}&price_lte=${maxPrice}`)
+      axios.get(`https://vercel-restful-api.vercel.app/${productType}?_sort=${sort}&_order=${order}&price_gte=${minPrice}&price_lte=${maxPrice}`)
         .then((res) => {
           setProducts(res.data);
         });
@@ -45,7 +45,7 @@ export default function ProductsList() {
 
   const searchBoxHandler = (e) => {
     axios
-      .get(`http://localhost:5000/${productType}?q=${e.target.value}`)
+      .get(`https://vercel-restful-api.vercel.app/${productType}?q=${e.target.value}`)
       .then((res) => {
         setProducts(res.data);
       });
