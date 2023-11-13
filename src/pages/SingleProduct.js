@@ -16,7 +16,7 @@ export default function SingleProduct() {
 
   useEffect(() => {
     axios
-      .get(`http://https://vercel-restful-api.vercel.app/${params.productType}/${params.productID}`)
+      .get(`https://vercel-restful-api.vercel.app/${params.productType}/${params.productID}`)
       .then((res) => {
         setProduct(res.data);
       });

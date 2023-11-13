@@ -8,11 +8,11 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 export default function MobileFilterModal({searchBoxHandler}) {
   const { priceRange, setPriceRange, sortType, setSortType } = useContext(GlobalContext);
   const [accIsOpen, setAccIsOpen] = useState(true);
-  const [showModal, setShowModal] = useState(false);
-  const [showModal2, setShowModal2] = useState(false);
+  const [showFilterModal, setShowFilterModal] = useState(false);
+  const [showSortModal, setShowSortModal] = useState(false);
 
-  const modalDisplay = !showModal ? "hidden" : "";
-  const modalDisplay2 = !showModal2 ? "hidden" : "";
+  const filterModalDisplay = !showFilterModal ? "invisible opacity-0 translate-y-full" : "visible opacity-100 translate-y-0";
+  const sortModalStyle = !showSortModal ? "invisible opacity-0 translate-y-full" : "visible opacity-100 translate-y-0";
 
   const accDisplay = !accIsOpen ? "hidden" : "";
   const rotation = !accIsOpen ? "" : "rotate-180";
@@ -30,13 +30,13 @@ export default function MobileFilterModal({searchBoxHandler}) {
     // filter-sort bar (mobile queries)
     <div>
       <div className="flex lg:hidden justify-between items-center gap-x-3 mb-5 px-5">
-        <button onClick={(e)=> setShowModal2(true)} className="w-full bg-white rounded-md p-2 flex items-center">
+        <button onClick={(e)=> setShowSortModal(true)} className="w-full bg-white rounded-md p-2 flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 stroke-orange-600">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"/>
           </svg>
           <span className="mr-2 text-sm sm:text-base font-semibold text-slate-800">{sortTypeText}</span>
         </button>
-        <button onClick={(e)=> setShowModal(true)} className="w-full bg-white rounded-md p-2 flex items-center">
+        <button onClick={(e)=> setShowFilterModal(true)} className="w-full bg-white rounded-md p-2 flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 stroke-gray-400">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"/>
           </svg>
@@ -52,8 +52,8 @@ export default function MobileFilterModal({searchBoxHandler}) {
 
       {/* sort modal */}
       <div>
-        <div className={`${modalDisplay2} md:hidden bg-transparent absolute inset-0 backdrop-blur-md z-30`}></div>
-        <div className={`${modalDisplay2} md:hidden bg-white w-full min-h-[412px] fixed bottom-0 z-40 rounded-tl-3xl rounded-tr-3xl shadow-lg`}>
+        <div className={`${!showSortModal ? "invisible opacity-0" : "visible opacity-100"} md:hidden bg-transparent absolute inset-0 backdrop-blur-md z-30 transition-all duration-300`}></div>
+        <div className={`${sortModalStyle} md:hidden bg-white w-full min-h-[412px] fixed bottom-0 z-40 rounded-tl-3xl rounded-tr-3xl shadow-lg transition-all duration-500`}>
           <div className="p-5">
             <div className="text-orange-500 text-xl font-bold block mb-4">دسته بندی</div>
             {/* accordion 1 */}
@@ -73,7 +73,7 @@ export default function MobileFilterModal({searchBoxHandler}) {
               </button>
               <div className={`${accDisplay} p-4 flex flex-col gap-y-2`}>
                 <div className="flex items-center gap-x-3">
-                  <input onChange={(e) => setSortType(e.target.value)} checked={sortType.includes("mostPopular")} value="mostPopular" name="sortType" id="sortType1" type="radio" defaultChecked className="form-radio checked:bg-none rounded text-orange-500 focus:ring-0 focus:ring-offset-0"/>
+                  <input onChange={(e) => setSortType(e.target.value)} checked={sortType.includes("mostPopular")} value="mostPopular" name="sortType" id="sortType1" type="radio" className="form-radio checked:bg-none rounded text-orange-500 focus:ring-0 focus:ring-offset-0"/>
                   <label htmlFor="sortType1" className="font-semibold">محبوبترین</label>
                 </div>
                 <div className="flex items-center gap-x-3">
@@ -93,8 +93,8 @@ export default function MobileFilterModal({searchBoxHandler}) {
           </div>
           <div className="mt-8">
             <div className="flex w-full justify-between px-5 gap-x-6 absolute bottom-5">
-              <button onClick={(e)=> setShowModal2(false)} className="w-full bg-orange-400 text-white py-2 rounded-md">تایید</button>
-              <button onClick={(e)=> setShowModal2(false)} className="w-full bg-orange-100 border border-orange-600 text-orange-600 rounded-md">لغو فیلتر</button>
+              <button onClick={(e)=> setShowSortModal(false)} className="w-full bg-orange-400 text-white py-2 rounded-md">تایید</button>
+              <button onClick={(e)=> setShowSortModal(false)} className="w-full bg-orange-100 border border-orange-600 text-orange-600 rounded-md">لغو فیلتر</button>
             </div>
           </div>
         </div>
@@ -102,8 +102,8 @@ export default function MobileFilterModal({searchBoxHandler}) {
 
       {/* filter modal */}
       <div>
-        <div className={`${modalDisplay} md:hidden bg-transparent absolute inset-0 backdrop-blur-md z-30`}></div>
-        <div className={`${modalDisplay} md:hidden bg-white w-full min-h-[412px] fixed bottom-0 z-40 rounded-tl-3xl rounded-tr-3xl shadow-lg`}>
+        <div className={`${!showFilterModal ? "invisible opacity-0" : "visible opacity-100"} md:hidden bg-transparent absolute inset-0 backdrop-blur-md z-30 transition-all duration-300`}></div>
+        <div className={`${filterModalDisplay} md:hidden bg-white w-full min-h-[412px] fixed bottom-0 z-40 rounded-tl-3xl rounded-tr-3xl shadow-lg transition-all duration-500`}>
           <div className="p-5">
             <div className="text-orange-500 text-xl font-bold block mb-4">فیلتر</div>
             {/* accordion 1 */}
@@ -123,7 +123,7 @@ export default function MobileFilterModal({searchBoxHandler}) {
               </button>
               <div className={`${accDisplay} p-4 flex flex-col gap-y-2`}>
                 <div className="flex items-center gap-x-3">
-                  <input onChange={(e) => setPriceRange(e.target.value)} checked={priceRange.includes("any")} value="any" name="mobilePriceRange" id="priceRange1" type="radio" defaultChecked className="form-radio checked:bg-none rounded text-orange-500 focus:ring-0 focus:ring-offset-0"/>
+                  <input onChange={(e) => setPriceRange(e.target.value)} checked={priceRange.includes("any")} value="any" name="mobilePriceRange" id="priceRange1" type="radio" className="form-radio checked:bg-none rounded text-orange-500 focus:ring-0 focus:ring-offset-0"/>
                   <label htmlFor="priceRange1" className="font-semibold">همه</label>
                 </div>
                 <div className="flex items-center gap-x-3">
@@ -157,8 +157,8 @@ export default function MobileFilterModal({searchBoxHandler}) {
           </div>
           <div className="mt-8">
             <div className="flex w-full justify-between px-5 gap-x-6 absolute bottom-5">
-              <button onClick={(e)=> setShowModal(false)} className="w-full bg-orange-400 text-white py-2 rounded-md">تایید</button>
-              <button onClick={(e)=> setShowModal(false)} className="w-full bg-orange-100 border border-orange-600 text-orange-600 rounded-md">لغو فیلتر</button>
+              <button onClick={(e)=> setShowFilterModal(false)} className="w-full bg-orange-400 text-white py-2 rounded-md">تایید</button>
+              <button onClick={(e)=> setShowFilterModal(false)} className="w-full bg-orange-100 border border-orange-600 text-orange-600 rounded-md">لغو فیلتر</button>
             </div>
           </div>
         </div>

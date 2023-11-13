@@ -65,7 +65,7 @@ export default function SideBar() {
                     </button>
                     <div className={`${display} p-4 flex flex-col gap-y-2`}>
                         <div className="flex items-center gap-x-3">
-                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("any")} defaultChecked value='any' name="desktopPriceRange" id="desktopPriceRange1" type="radio" className="form-radio checked:bg-none focus:ring-0 rounded focus:ring-offset-0 text-orange-500"/>
+                            <input onChange={(e)=> setPriceRange(e.target.value)} checked={priceRange.includes("any")} value='any' name="desktopPriceRange" id="desktopPriceRange1" type="radio" className="form-radio checked:bg-none focus:ring-0 rounded focus:ring-offset-0 text-orange-500"/>
                             <label htmlFor="desktopPriceRange1"  className='text-sm xl:text-base font-semibold'>همه</label>
                         </div>
                         <div className="flex items-center gap-x-3">

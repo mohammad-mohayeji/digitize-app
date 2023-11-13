@@ -5,7 +5,6 @@ import MobileBottomNav from "../components/MobileBottomNav";
 // import our global context
 import { GlobalContext } from "../GlobalContextProvider";
 import CartItemCard from "../components/CartItemCard";
-import convertNumberToPersian from "../useConvertNumbersToPersian";
 import useConvertNumbersToPersian from "../useConvertNumbersToPersian";
 
 export default function Cart() {

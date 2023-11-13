@@ -10,6 +10,7 @@ const initialState = {
 
 export default function GlobalContextProvider({ children }) {
   const [products, setProducts] = useState([{ id: 1, category: "" }]);
+  const [loading, setLoading] = useState(false)
   const [sortType, setSortType] = useState("mostPopular");
   const [priceRange, setPriceRange] = useState("any");
   const [minPrice, setMinPrice] = useState("");
@@ -41,7 +42,6 @@ export default function GlobalContextProvider({ children }) {
     <GlobalContext.Provider
       value={{
         cartItems: state.cart,
-        // setCartItems,
         increaseQuantityHandler,
         decreaseQuantityHandler,
         removeFromCartHandler,
@@ -55,6 +55,8 @@ export default function GlobalContextProvider({ children }) {
         setMinPrice,
         maxPrice,
         setMaxPrice,
+        loading,
+        setLoading
       }}
     >
       {children}
