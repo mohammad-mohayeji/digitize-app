@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 // import icons
-import { ShoppingCartIcon } from "@heroicons/react/24/outline";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { ShoppingCartIcon, UserIcon } from "@heroicons/react/24/outline";
 
 // import our global context
 import { GlobalContext } from "../GlobalContextProvider";
@@ -11,7 +10,7 @@ import { GlobalContext } from "../GlobalContextProvider";
 export default function Main() {
   const { cartItems } = useContext(GlobalContext);
   return (
-    <nav className="hidden md:block bg-white py-4 px-7 sticky top-0 z-20 shadow-lg border-b">
+    <nav className="block bg-white py-4 px-7 sticky top-0 z-20 shadow-lg border-b">
       <div className="container xl:max-w-screen-xl mx-auto gap-x-8">
         <div className="flex items-center justify-between gap-x-6">
           <Link to="/">

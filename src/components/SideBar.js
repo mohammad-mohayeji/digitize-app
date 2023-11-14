@@ -10,7 +10,7 @@ export default function SideBar() {
     const rotation = !isOpen ? "" : "rotate-180";
 
   return (
-    <div className="hidden lg:block lg:col-span-3 row-span-2">
+    <div className="hidden md:block md:col-span-4 lg:col-span-3 row-span-2">
         <div className="bg-white rounded-lg flex flex-col p-4 sticky top-[100px] max-h-[calc(100vh_-_140px)] overflow-auto">
             {/* classification */}
             <div className="border-b border-gray-100 pb-3">

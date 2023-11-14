@@ -5,23 +5,15 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 const divStyle = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
   height: "400px",
 };
 
 const slideImages = [
   {
     url: "https://s8.uupload.ir/files/620b413c91ebb4a5d0bc37ae268f9e0745ce803c_1665865368_tnrl.jpg",
-    caption: "Slide 1",
   },
   {
     url: "https://s8.uupload.ir/files/d593fccf72a9e8120a2a25189e493aae090f0899_1682493893_fej6.jpg",
-    caption: "Slide 3",
   },
 ];
 
@@ -50,7 +42,9 @@ export default function ImageSlider() {
       <Slide indicators={true} {...properties} duration={3000}>
         {slideImages.map((slideImage, index) => (
           <div key={index}>
-            <div style={{ ...divStyle, backgroundImage: `url(${slideImage.url})` }}></div>
+            <div style={{...divStyle}}>
+              <img src={slideImage.url} alt="img" className="w-full h-full object-cover"/>
+            </div>
           </div>
         ))}
       </Slide>

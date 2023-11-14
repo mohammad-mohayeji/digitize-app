@@ -5,9 +5,9 @@ import { Link, NavLink } from "react-router-dom";
 import { GlobalContext } from "../GlobalContextProvider";
 
 export default function MobileBottomNav() {
-    const { cartItems } = useContext(GlobalContext);
+  const { cartItems } = useContext(GlobalContext);
   return (
-    <nav className="mobileBottomNav block lg:hidden fixed z-30 bottom-0 w-full py-1 bg-white px-5 rounded-tl-lg rounded-tr-lg shadow-lg border-t border-gray-300">
+    <nav className="mobileBottomNav block md:hidden fixed z-30 bottom-0 w-full py-1 bg-white px-5 rounded-tl-3xl rounded-tr-3xl shadow-xl shadow-slate-950">
       <ul className="flex items-center justify-around gap-x-3 text-sm text-slate-500">
         <li>
           <NavLink to="/" className="flex items-center gap-x-2 py-3">
@@ -25,7 +25,10 @@ export default function MobileBottomNav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/classification" className="flex items-center gap-x-2 py-3">
+          <NavLink
+            to="/classification"
+            className="flex items-center gap-x-2 py-3"
+          >
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

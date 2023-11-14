@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="hidden lg:block bg-white py-5 px-7 shadow-md border-t border-t-gray-300">
+    <footer className="hidden md:block bg-white py-5 px-7 shadow-md border-t border-t-gray-300">
       <div className="container mx-auto xl:max-w-screen-xl flex flex-wrap md:gap-9 lg:gap-0 items-center justify-between text-slate-800">
         <div>
           <div className="flex items-center gap-x-4 mb-8">

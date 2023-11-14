@@ -7,16 +7,16 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 export default function SortBar({searchBoxHandler}) {
   const { sortType, setSortType } = useContext(GlobalContext);
   return (
-    <div className="hidden lg:block lg:col-span-9">
-      <div className="flex items-center gap-x-5 bg-white rounded-md p-2">
-        <div className="bg-orange-100 p-2 rounded-sm">
+    <div className="hidden md:block md:col-span-8 lg:col-span-9">
+      <div className="flex items-center gap-x-2 lg:gap-x-5 bg-white rounded-md p-2">
+        <div className="hidden lg:block bg-orange-100 p-2 rounded-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-7 h-7 stroke-orange-600"
+            className="w-5 h-5 lg:w-7 lg:h-7 stroke-orange-600"
           >
             <path
               strokeLinecap="round"
@@ -25,8 +25,8 @@ export default function SortBar({searchBoxHandler}) {
             />
           </svg>
         </div>
-        <div className="flex items-center justify-between w-full">
-          <ul className="flex items-center gap-x-5">
+        <div className="flex items-center justify-between w-full gap-x-4">
+          <ul className="flex items-center gap-x-3 text-[13px] lg:text-base">
             <li className="py-2 relative">
               <button
                 onClick={(e) => setSortType(e.target.id)}
@@ -97,12 +97,7 @@ export default function SortBar({searchBoxHandler}) {
               <div className="py-3 pr-2">
                 <MagnifyingGlassIcon className="w-5 h-5" />
               </div>
-              <input
-                onChange={searchBoxHandler}
-                type="search"
-                placeholder="جستجوی نام محصول، نام برند، نام مدل و ..."
-                className="form-input text-sm text-slate-800 w-full bg-transparent border-0 focus:outline-none focus:ring-0 py-3 px-3"
-              />
+              <input onChange={searchBoxHandler} type="search" placeholder="جستجوی نام محصول، نام برند، نام مدل و ..." className="form-input text-sm text-slate-800 w-full bg-transparent border-0 focus:outline-none focus:ring-0 py-3 px-3 placeholder:text-xs"/>
             </div>
           </div>
         </div>
