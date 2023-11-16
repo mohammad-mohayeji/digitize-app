@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import MobileHeader from "../components/MobileHeader";
+import MobileTopNav from "../components/MobileTopNav";
 import MobileBottomNav from "../components/MobileBottomNav";
 
 // import our global context
@@ -18,7 +18,7 @@ export default function Cart() {
 
   return (
     <>
-      <MobileHeader title="سبد خرید" />
+      <MobileTopNav title="سبد خرید" />
       {cartItems.length ? (
         <div className="flex flex-wrap lg:flex-nowrap md:px-4 md:gap-x-4 container xl:max-w-screen-xl mx-auto md:mt-7 mb-10 pb-10">
           {/* cart items */}

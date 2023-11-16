@@ -1,12 +1,12 @@
 import React from "react";
-import MobileHeader from "../components/MobileHeader";
 import { Link } from "react-router-dom";
 import MobileBottomNav from "../components/MobileBottomNav";
+import MobileTopNav from "../components/MobileTopNav";
 
 export default function Classification() {
   return (
     <div className="md:hidden">
-      <MobileHeader title="دسته بندی" />
+      <MobileTopNav title="دسته بندی" />
       <div className="px-3 flex flex-col gap-y-8 mb-10 pb-10">
         <div className="flex overflow-x-auto text-gray-500 pb-2">
           <div className="w-full max-w-[160px] bg-gray-300 rounded-lg flex flex-col items-center overflow-hidden shrink-0 ml-4 justify-around">

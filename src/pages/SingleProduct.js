@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Breadcrumb from "../components/Breadcrumb";
-import MobileHeader from "../components/MobileHeader";
+import MobileTopNav from "../components/MobileTopNav";
 import MobileBottomNav from "../components/MobileBottomNav";
 
 // import our global context
@@ -31,7 +31,7 @@ export default function SingleProduct() {
   
   return (
     <div>
-      <MobileHeader title={product.category} />
+      <MobileTopNav title={product.category} />
       <div className="container mx-auto xl:max-w-screen-xl grid grid-cols-12 lg:grid-rows-[60px_minmax(500px,_1fr)] lg:gap-2 lg:px-4 lg:mt-6 mb-10 pb-10">
         <Breadcrumb productLabel={product.label} productCategory={product.category} productTitle={product.title}/>
         <div className="col-span-12">
