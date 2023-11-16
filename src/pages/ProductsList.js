@@ -47,7 +47,7 @@ export default function ProductsList() {
     if (priceRange === "any") {
       axios
         .get(
-          `https://vercel-restful-api.vercel.app/${productType}?_sort=${sort}&_order=${order}`
+          `https://digitize-restful-api.vercel.app/${productType}?_sort=${sort}&_order=${order}`
         )
         .then((res) => {
           setProducts(res.data);
@@ -56,7 +56,7 @@ export default function ProductsList() {
     } else {
       axios
         .get(
-          `https://vercel-restful-api.vercel.app/${productType}?_sort=${sort}&_order=${order}&price_gte=${minPrice}&price_lte=${maxPrice}`
+          `https://digitize-restful-api.vercel.app/${productType}?_sort=${sort}&_order=${order}&price_gte=${minPrice}&price_lte=${maxPrice}`
         )
         .then((res) => {
           setProducts(res.data);
@@ -68,7 +68,7 @@ export default function ProductsList() {
   const searchBoxHandler = (e) => {
     axios
       .get(
-        `https://vercel-restful-api-mohammad-mohayeji.vercel.app/${productType}?q=${e.target.value}`
+        `https://digitize-restful-api.vercel.app/${productType}?q=${e.target.value}`
       )
       .then((res) => {
         setProducts(res.data);

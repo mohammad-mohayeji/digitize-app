@@ -16,12 +16,12 @@ export default function Home() {
   const [popularProducts, setPopularProducts] = useState([]);
 
   useEffect(() => {
-    const res1 = axios.get("https://vercel-restful-api.vercel.app/mobile/1");
-    const res3 = axios.get("https://vercel-restful-api.vercel.app/lapTop/1");
-    const res2 = axios.get("https://vercel-restful-api.vercel.app/mobile/2");
-    const res4 = axios.get("https://vercel-restful-api.vercel.app/smartWatch/1");
-    const res5 = axios.get("https://vercel-restful-api.vercel.app/lapTop/3");
-    const res6 = axios.get("https://vercel-restful-api.vercel.app/smartWatch/3");
+    const res1 = axios.get("https://digitize-restful-api.vercel.app/mobile/1");
+    const res3 = axios.get("https://digitize-restful-api.vercel.app/lapTop/1");
+    const res2 = axios.get("https://digitize-restful-api.vercel.app/mobile/2");
+    const res4 = axios.get("https://digitize-restful-api.vercel.app/smartWatch/1");
+    const res5 = axios.get("https://digitize-restful-api.vercel.app/lapTop/3");
+    const res6 = axios.get("https://digitize-restful-api.vercel.app/smartWatch/3");
 
     Promise.all([res1, res2, res3, res4, res5, res6]).then((values) => {
       setPopularProducts([
